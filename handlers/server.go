@@ -75,6 +75,7 @@ func (s *server) GetServer(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"simulator_status": simulatorStatus,
 		"rerun_times":      s.ReRunTimes,
+		"max_broker_count": s.MaxBrokerCount,
 		"broker_counts":    len(s.Brokers),
 		"brokers":          s.Brokers,
 		"uptime":           time.Since(s.StartTime).Seconds(),
