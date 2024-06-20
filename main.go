@@ -12,12 +12,12 @@ import (
 )
 
 const (
-	MaxBrokerCount           = 10
+	MaxBrokerCount           = 5
 	RestaterCheckInterval    = 1 * time.Second
 	BrokerReadyCheckInterval = 1 * time.Second
 	BaseDir                  = "C:\\Users\\SJSJ\\Desktop\\wowsan"
 	SeedBatchFile            = "scripts\\broker_test_fixed.bat"
-	SimulatorFile            = "cmd\\simulator\\main.go"
+	SimulatorFile            = "cmd\\simulator\\run\\main.go"
 	// BaseDir       = `/Users/zkdltid/Desktop/go-test2/pubsubtest`
 	// SeedBatchFile = `scripts/broker.sh`
 	// SimulatorFile = `cmd/simulator/main.go`
@@ -27,7 +27,7 @@ func main() {
 	r := gin.Default()
 
 	logger := logrus.New()
-	logFile, err := os.OpenFile(fmt.Sprintf("server_%s.log", time.Now().Format("20060102_150405")), os.O_CREATE|os.O_WRONLY, 0644)
+	logFile, err := os.OpenFile(fmt.Sprintf(".\\log\\server_%s.log", time.Now().Format("20060102_150405")), os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		panic(fmt.Sprintf("Failed to open log file: %v", err))
 	}
