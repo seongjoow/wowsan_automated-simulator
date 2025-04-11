@@ -9,7 +9,7 @@ import (
 func RunCommand(cmdStr string) error {
 	var cmd *exec.Cmd
 	if runtime.GOOS == "windows" {
-		cmd = exec.Command("cmd.exe", "/c", "start", "cmd.exe", "/c", cmdStr)
+		cmd = exec.Command("cmd.exe", "/k", "start", "cmd.exe", "/k", cmdStr)
 	} else if runtime.GOOS == "darwin" { // macOS
 		cmd = exec.Command("osascript", "-e", `tell application "Terminal" to activate`, "-e", `tell application "Terminal" to do script "`+cmdStr+`"`)
 	} else {

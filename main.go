@@ -17,7 +17,7 @@ const (
 	BrokerReadyCheckInterval = 1 * time.Second
 	BaseDir                  = "C:\\Users\\SJSJ\\Desktop\\wowsan"
 	SeedBatchFile            = "scripts\\broker_test_fixed.bat"
-	SimulatorFile            = "cmd\\simulator\\run\\main.go"
+	SimulatorFile            = "cmd\\simulator\\run\\case3\\main.go" // case 지정하기!!!!!!!!!!!!!!!!!!!!
 	// BaseDir       = `/Users/zkdltid/Desktop/go-test2/pubsubtest`
 	// SeedBatchFile = `scripts/broker.sh`
 	// SimulatorFile = `cmd/simulator/main.go`
